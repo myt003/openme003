@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rev formulaire</title>
+    <link rel="stylesheet" href="formu.css" />
+  </head>
+  <body>
+    <form action="form.php" method="post">
+      <fieldset>
+        <legend>General questions:</legend>
+        <div>
+          <label>How much do I matter to you:</label>
+          <input name="range_matter" type="range" />
+        </div>
+        <div>
+          <label>If you are going to rate me out of ten (looks):</label>
+          <input name="range_looks" type="number" required />
+        </div>
+        <div>
+          <label
+            >If you are going to rate me out of ten (intellectually):</label
+          >
+          <input name="range_iq" type="number" />
+        </div>
+        <div>
+          <label>What's my humor for you:</label>
+          <select name="humor_rating">
+            <optgroup label="Humor Rating">
+              <option value="cringe">Cringe</option>
+              <option value="not_bad">Not Bad</option>
+              <option value="funny">Funny</option>
+              <option value="crazy">Crazy</option>
+              <option value="dark">Dark</option>
+            </optgroup>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Personal questions:</legend>
+        <div>
+          <label>Describe me with a color:</label>
+          <input name="color_description" type="color" />
+        </div>
+        <div>
+          <label>Describe me in 3 words:</label>
+          <input name="small_describe" type="text" />
+        </div>
+        <div>
+          <label>Describe me in a paragraph (max 2500 characters):</label>
+          <br />
+          <textarea name="long_describe" maxlength="2500"></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Situation time:</legend>
+        <label>Let's say we're going out, what's the best scenario:</label
+        ><br />
+        <textarea name="best_scenario"></textarea><br />
+        <label>Choose a date to make your scenario come true:</label><br />
+        <input name="scenario_date" type="date" /><br />
+        <button data-label="Register" class="rainbow-hover">
+          <span class="sp">Register</span>
+        </button>
+      </fieldset>
+    </form>
+  </body>
+</html>
